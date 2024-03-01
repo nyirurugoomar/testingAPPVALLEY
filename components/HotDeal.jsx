@@ -1,11 +1,24 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import cardsData from "../data/Product.json";
 
 function HotDeal() {
   const [slideIndex, setSlideIndex] = useState(0);
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      const intervalId = setInterval(() => {
+        setSlideIndex((prevIndex) =>
+          prevIndex + 1 >= Math.ceil(cardsData.length / 4) ? 0 : prevIndex + 1
+        );
+      }, 3000); // Change slide every 3 seconds
+
+      return () => clearInterval(intervalId); // Cleanup on component unmount
+    }, 0);
+
+    return () => clearTimeout(timeoutId); // Cleanup if component unmounts before timeout
+  }, []);
   const nextSlide = () => {
     setSlideIndex((prevIndex) =>
       prevIndex + 1 >= Math.ceil(cardsData.length / 4) ? 0 : prevIndex + 1
@@ -26,16 +39,14 @@ function HotDeal() {
   const displayedCards = cardsData.slice(startIndex, endIndex);
 
   return (
-    <div className="mt-20 px-32 mb-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        {/* HOT DEAL */}
-        <div className="col-span-1 flex flex-col justify-start text-start mt-4">
-          <h1 className="text-[24px] font-[600]">HOT DEAL</h1>
-          <p className="text-[#999999] text-[12px]">
+    <div class="container mx-auto p-14">
+      <div class="md:flex md:grid-cols-2">
+        <div class="title mb-40 p-[4rem]">
+          <h1 class="text-[20px]  font-bold md:m-[30px]">HOT DEAL</h1>
+          <p className="text-[#999999] text-[10px] mt-10">
             [UP TO 34% OFF] HAPPY HOUR
           </p>
-
-          <div className="mt-40 gap-10 flex">
+          <div className="mt-10 gap-10 flex">
             {/* Conditionally render arrow buttons based on screen size */}
             <button
               className="cursor-pointer hidden lg:flex"
@@ -51,11 +62,10 @@ function HotDeal() {
             </button>
           </div>
         </div>
-        {/* CARDS */}
-        <div className="col-span-1 grid grid-cols-2 sm:grid-cols-4">
-          <div className="w-full flex justify-center gap-20">
-            {displayedCards.map((card) => (
-              <div key={card.id} className="text-start">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {displayedCards.map((card) => (
+            <div class="card p-6" key={card.id}>
+              <div className="text-start m-8">
                 <a href={card.url}>
                   <Image
                     className="w-[120px] h-[120px] m-4"
@@ -66,11 +76,13 @@ function HotDeal() {
                   />
                 </a>
                 <h1 className="w-[9rem] text-[15px]">{card.name}</h1>
-                <p>${card.price}</p>
-                <p>{card.rate}</p>
+                <p>
+                  <span className="text-red-800">${card.price}</span>
+                </p>
+                <p className="text-[12px] font-[500]">✡{card.rate}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
