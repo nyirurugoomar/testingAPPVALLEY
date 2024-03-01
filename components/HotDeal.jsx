@@ -42,7 +42,7 @@ function HotDeal() {
     <div class="container mx-auto p-14">
       <div class="md:flex md:grid-cols-2">
         <div class="title mb-40 p-[4rem]">
-          <h1 class="text-[20px]  font-bold md:m-[30px]">HOT DEAL</h1>
+          <h1 class="text-[18px]  font-bold md:m-[30px] w-max">HOT DEAL</h1>
           <p className="text-[#999999] text-[10px] mt-10">
             [UP TO 34% OFF] HAPPY HOUR
           </p>

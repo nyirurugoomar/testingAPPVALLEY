@@ -1,8 +1,9 @@
 import Category from "@/components/Category";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
-// import Testing from "@/components/Testing";
 import HotDeal from "@/components/HotDeal";
+import Top7 from "@/components/Top7";
+import Tv from "@/components/Tv";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,7 +13,8 @@ export default function Home() {
       <HeroSection />
       <Category />
       <HotDeal />
-      {/* <Testing /> */}
+      <Tv />
+      <Top7 />
     </main>
   );
 }
