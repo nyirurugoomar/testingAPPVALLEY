@@ -43,7 +43,7 @@ function HotDeal() {
       <div class="md:flex md:grid-cols-2">
         <div class="title  p-[4rem]">
           <h1 class="text-[20px] font-bold md:m-[30px] w-fit text-start">
-            판매량 TV 가성비 인기가전 모음
+            Hot Deal
           </h1>
           <p className="text-[#999999] text-[10px]  ml-[23px]">
             가격,성능,디자인까지
