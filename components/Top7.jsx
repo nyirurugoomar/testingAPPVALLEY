@@ -43,7 +43,7 @@ function Top7() {
       <div class="md:flex md:grid-cols-2">
         <div class="title  p-[4rem]">
           <h1 class="text-[20px] font-bold md:m-[30px] w-fit text-start">
-            판매량 TOP7 가성비 인기가전 모음
+            판매량 Top7 가성비 인기가전 모음
           </h1>
           <p className="text-[#999999] text-[10px]  ml-[23px]">
             가격,성능,디자인까지
@@ -64,7 +64,7 @@ function Top7() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center justify-items-center">
           {displayedCards.map((card) => (
             <div class="card" key={card.id}>
               <div className="text-start m-8">

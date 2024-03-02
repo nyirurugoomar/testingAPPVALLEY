@@ -41,10 +41,12 @@ function HotDeal() {
   return (
     <div class="container mx-auto p-14">
       <div class="md:flex md:grid-cols-2">
-        <div class="title p-[4rem]">
-          <h1 class="text-[18px]  font-bold md:m-[30px]">HOT DEAL</h1>
-          <p className="text-[#999999] text-[10px] ml-[23px]">
-            [UP TO 34% OFF] HAPPY HOUR
+        <div class="title  p-[4rem]">
+          <h1 class="text-[20px] font-bold md:m-[30px] w-fit text-start">
+            판매량 TV 가성비 인기가전 모음
+          </h1>
+          <p className="text-[#999999] text-[10px]  ml-[23px]">
+            가격,성능,디자인까지
           </p>
           <div className="mt-10 gap-10 flex">
             {/* Conditionally render arrow buttons based on screen size */}
@@ -62,13 +64,13 @@ function HotDeal() {
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center justify-items-center">
           {displayedCards.map((card) => (
-            <div class="card " key={card.id}>
+            <div class="card" key={card.id}>
               <div className="text-start m-8">
                 <a href={card.url}>
                   <Image
-                    className="md:w-[120px] md:h-[120px] m-4"
+                    className="w-[120px] h-[120px] m-4"
                     src={card.url}
                     alt={card.name}
                     width={100}
