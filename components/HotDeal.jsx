@@ -43,7 +43,7 @@ function HotDeal() {
       <div class="md:flex md:grid-cols-2">
         <div class="title p-[4rem]">
           <h1 class="text-[18px]  font-bold md:m-[30px]">HOT DEAL</h1>
-          <p className="text-[#999999] text-[10px]">
+          <p className="text-[#999999] text-[10px] ml-[23px]">
             [UP TO 34% OFF] HAPPY HOUR
           </p>
           <div className="mt-10 gap-10 flex">

@@ -1,4 +1,5 @@
 import Category from "@/components/Category";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import HotDeal from "@/components/HotDeal";
@@ -15,6 +16,7 @@ export default function Home() {
       <HotDeal />
       <Tv />
       <Top7 />
+      <Footer />
     </div>
   );
 }
