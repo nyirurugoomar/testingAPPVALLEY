@@ -41,11 +41,11 @@ function Top7() {
   return (
     <div class="container mx-auto p-14">
       <div class="md:flex md:grid-cols-2">
-        <div class="title mb-40 p-[4rem]">
-          <h1 class="text-[20px] font-bold md:m-[30px] w-fit">
+        <div class="title  p-[4rem]">
+          <h1 class="text-[20px] font-bold md:m-[30px] w-fit text-start">
             판매량 TOP7 가성비 인기가전 모음
           </h1>
-          <p className="text-[#999999] text-[10px] mt-10">
+          <p className="text-[#999999] text-[10px]  ml-[23px]">
             가격,성능,디자인까지
           </p>
           <div className="mt-10 gap-10 flex">

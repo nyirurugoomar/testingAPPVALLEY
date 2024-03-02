@@ -41,11 +41,13 @@ function Tv() {
   return (
     <div class="container mx-auto p-14">
       <div class="md:flex md:grid-cols-2">
-        <div class="title mb-40 p-[4rem]">
-          <h1 class="text-[20px] font-bold md:m-[30px] w-fit">
-            저렴한 가격과 보장된 성능, 더함 TV
+        <div class="title  p-[4rem]">
+          <h1 class="text-[20px] font-bold md:m-[30px] w-fit text-start">
+            판매량 TOP7 가성비 인기가전 모음
           </h1>
-          <p className="text-[#999999] text-[10px] mt-10">사은품 증정이벤트</p>
+          <p className="text-[#999999] text-[10px]  ml-[23px]">
+            가격,성능,디자인까지
+          </p>
           <div className="mt-10 gap-10 flex">
             {/* Conditionally render arrow buttons based on screen size */}
             <button
@@ -64,7 +66,7 @@ function Tv() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {displayedCards.map((card) => (
-            <div class="card p-6" key={card.id}>
+            <div class="card" key={card.id}>
               <div className="text-start m-8">
                 <a href={card.url}>
                   <Image

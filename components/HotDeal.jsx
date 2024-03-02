@@ -41,9 +41,9 @@ function HotDeal() {
   return (
     <div class="container mx-auto p-14">
       <div class="md:flex md:grid-cols-2">
-        <div class="title mb-40 p-[4rem]">
-          <h1 class="text-[18px]  font-bold md:m-[30px] w-max">HOT DEAL</h1>
-          <p className="text-[#999999] text-[10px] mt-10">
+        <div class="title p-[4rem]">
+          <h1 class="text-[18px]  font-bold md:m-[30px]">HOT DEAL</h1>
+          <p className="text-[#999999] text-[10px]">
             [UP TO 34% OFF] HAPPY HOUR
           </p>
           <div className="mt-10 gap-10 flex">
@@ -64,11 +64,11 @@ function HotDeal() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {displayedCards.map((card) => (
-            <div class="card p-6" key={card.id}>
+            <div class="card " key={card.id}>
               <div className="text-start m-8">
                 <a href={card.url}>
                   <Image
-                    className="w-[120px] h-[120px] m-4"
+                    className="md:w-[120px] md:h-[120px] m-4"
                     src={card.url}
                     alt={card.name}
                     width={100}
